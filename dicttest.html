@@ -15,110 +15,13 @@
 </head>
 
 <body>
-
 <script>
     fetch('./pli2id_cped.json')
         .then((response) => response.json())
         .then((json) => {
-                    //Then json info is here
             console.log(json);
                         });
 </script>
-    
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container-fluid">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="/">Kamus Pāḷi-Indonesia Sederhana</a>
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid">
-    <div id="main-content">
-        <div class="row-fluid">
-            <form class="form-search">
-                <input type="text" class="input-xlarge search-query" placeholder="a word to look up...">
-                <button class="btn btn-primary search">Search</button>
-                <button class="btn reset">Clear</button>
-            </form>
-        </div>
-        <!--/row-->
-        <div class="row-fluid">
-            <div class="results-wrapper span9">
-                <div class="row-fluid">
-                    <div class="loading loading-hidden span9 well">
-                        Loading...
-                    </div>
-                </div>
-                <div class="row-fluid">
-                    <div class="no-matches no-matches-hidden span9 alert alert-block">
-                        Found no matches.
-                    </div>
-                </div>
-                <div class="row-fluid">
-                    <div class="api-error api-error-hidden span9 alert alert-block alert-error">
-                        <h4>List of post titles:</h4>
-                        <ul>
-                            <li>URL: <a></a></li>
-                            <li>HTTP status: <span class="statusNum"></span> (<span class="statusText"></span>)</li>
-                        </ul>
-                        
-                        <p></p>
-                    </div>
-                </div>
-                <div class="row-fluid">
-                    <div class="results span9">
-                    </div>
-                </div>
-            </div>
-            <div class="sidebar span3">
-                <table id="similar" class="table table-hover table-condensed table-striped hidden">
-                    <thead><tr><th>Similar <i class="pull-right icon-remove-circle dismiss"></i></th></tr></thead>
-                    <tbody class="similar-list">
-                    </tbody>
-                </table>
-                <table id="recent" class="table table-hover table-condensed table-striped hidden">
-                    <thead><tr><th>Recent</th></tr></thead>
-                    <tbody class="recent-list">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    {% if dictionary.license %}
-    <hr/>
-
-    <footer>
-        <div class="license">{{ dictionary.license|urlize }}</div>
-    </footer>
-    {% endif %}
-</div>
-<!--/.fluid-container-->
-
-<script type="text/template" id="entry-template">
-    <td><a href="#entries/<%= entry_id %>"><%= name %></a></td>
-</script>
-
-<script type="text/javascript">
-    // the dictionary to use
-    DICT_ID = '{{ dict_id }}';
-</script>
-
-<!-- Le javascript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="/static/js/jquery-1.8.0.min.js"></script>
-<script src="/static/bootstrap/js/bootstrap.min.js"></script>
-<script src="/static/js/underscore-min.js"></script>
-<script src="/static/js/backbone-min.js"></script>
-<script src="/static/js/backbone-localstorage.js"></script>
-<script src="/static/js/webdict.backbone.js"></script>
-
 </body>
+    
 </html>
