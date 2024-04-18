@@ -76,10 +76,11 @@
                             <li>HTTP status: <span class="statusNum"></span> (<span class="statusText"></span>)</li>
                         </ul>
                         <script>
-                            fetch('/pli2id_cped.json')
-                                .then(res => res.json())
-                                .then(data => {
-                                    console.log(data);
+                            fetch('./pli2id_cped.json')
+                                .then((response) => response.json())
+                                .then((json) => {
+                    //Then json info is here
+                                    console.log(json);
                                 });
                         </script>
                         <p></p>
