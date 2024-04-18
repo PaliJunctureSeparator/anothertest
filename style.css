@@ -108,15 +108,15 @@ ul li:last-child{
   border-bottom: 0;
   padding-bottom: 0;
 }
-ul .word p{
+ul .entry p{
   font-size: 22px;
   font-weight: 500;
 }
-ul .word span{
+ul .entry span{
   font-size: 12px;
   color: #989898;
 }
-ul .word i{
+ul .entry i{
   color: #999;
   font-size: 15px;
   cursor: pointer;
