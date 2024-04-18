@@ -33,6 +33,15 @@
 
 <body>
 
+<script>
+    fetch('./pli2id_cped.json')
+        .then((response) => response.json())
+        .then((json) => {
+                    //Then json info is here
+            console.log(json);
+                        });
+</script>
+    
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container-fluid">
@@ -75,14 +84,7 @@
                             <li>URL: <a></a></li>
                             <li>HTTP status: <span class="statusNum"></span> (<span class="statusText"></span>)</li>
                         </ul>
-                        <script>
-                            fetch('./pli2id_cped.json')
-                                .then((response) => response.json())
-                                .then((json) => {
-                    //Then json info is here
-                                    console.log(json);
-                                });
-                        </script>
+                        
                         <p></p>
                     </div>
                 </div>
