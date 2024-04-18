@@ -2,7 +2,6 @@ const wrapper = document.querySelector(".wrapper"),
 searchInput = wrapper.querySelector("input"),
 volume = wrapper.querySelector(".entry i"),
 infoText = wrapper.querySelector(".info-text"),
-synonyms = wrapper.querySelector(".synonyms .list"),
 removeIcon = wrapper.querySelector(".search span");
 let audio;
 
@@ -14,7 +13,6 @@ function data(result, entry){
         let definitions = result[0].meanings[0].definitions[0],
         document.querySelector(".entry p").innerText = result[0].entry;
         document.querySelector(".meaning span").innerText = definitions.definition;
-        document.querySelector(".example span").innerText = definitions.example;
     }
 }
 
